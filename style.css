@@ -7,9 +7,9 @@
 }
 
 :root {
-  --teal: #1f4f59;
-  --teal-dark: #163b43;
-  --teal-light: #2a6672;
+  --teal: #1f3f59;
+  --teal-dark: #162843;
+  --teal-light: #2a4c72;
   --gold: #b8946a;
   --cream: #f5f0e8;
   --cream-dark: #ede4d3;
@@ -133,6 +133,24 @@ nav.scrolled {
   background: radial-gradient(ellipse at 30% 60%, rgba(42, 138, 138, 0.3) 0%, transparent 60%);
 }
 
+/* ── HERO LOGO — posicionada absolutamente no canto direito do hero-left ── */
+.hero-logo {
+  width: 340px;
+  height: auto;
+  mix-blend-mode: lighten;
+  opacity: 0.92;
+  position: absolute;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Wrapper do parágrafo — logo saiu do fluxo */
+.hero-sub-row {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
 .hero-eyebrow {
   font-size: 0.72rem;
   letter-spacing: 0.2em;
@@ -173,7 +191,7 @@ nav.scrolled {
   color: rgba(245, 240, 232, 0.7);
   max-width: 360px;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 .hero-cta {
@@ -829,11 +847,18 @@ footer {
   .hero-left {
     padding: 5.5rem 2rem 3.5rem;
     min-height: 100svh;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero-right {
     display: none;
+  }
+
+  .hero-logo {
+    position: static;
+    transform: none;
+    width: 220px;
+    margin-bottom: 2rem;
   }
 
   /* Nome */
@@ -922,12 +947,16 @@ footer {
 
   /* Hero */
   .hero-left {
-    padding: 5rem 1.25rem 3rem;
-    justify-content: center;
+    padding: 4.5rem 1.25rem 3rem;
+    justify-content: flex-start;
   }
 
   .hero-sub {
     font-size: 0.84rem;
+  }
+
+  .hero-logo {
+    width: 160px;
   }
 
   /* Nome */
