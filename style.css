@@ -802,6 +802,26 @@ footer {
   transform: translateY(0);
 }
 
+/* ── RESPONSIVO — NOTEBOOK/LAPTOP (901–1600px) ──
+   */
+@media (min-width: 901px) and (max-width: 1600px) {
+  .hero-logo {
+    width: clamp(120px, 15vw, 190px);
+    top: auto;
+    bottom: 13rem;
+    right: 2rem;
+    transform: none;
+  }
+
+  .hero-left {
+    padding: 7rem 3rem 4rem;
+  }
+
+  .hero-sub {
+    max-width: 300px;
+  }
+}
+
 /* ── RESPONSIVO — TABLET (600–900px) ── */
 @media (max-width: 900px) {
   html {
